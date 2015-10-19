@@ -6,7 +6,7 @@
     <groupId>net.retimus</groupId>
     <artifactId>appdirect</artifactId>
     <version>0.1.0</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
 
     <properties>
         <start-class>net.retimus.appdirect.Application</start-class>
