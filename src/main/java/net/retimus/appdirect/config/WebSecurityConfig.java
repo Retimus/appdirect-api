@@ -50,8 +50,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             .csrf().disable();
         http
             .authorizeRequests()
-                .antMatchers("/", "/home", "/appdirect/**", "/test/**").permitAll()
-                .anyRequest().authenticated();
+                .antMatchers("/**", "/appdirect/**", "/test/**").permitAll()
+                .anyRequest().authenticated()
+                .and()
+            .formLogin()
+                .and()
+            .httpBasic().disable();
+/*        
         http
             .openidLogin()
                 .permitAll()
@@ -73,6 +78,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .logoutSuccessHandler(new CustomLogoutSuccessHandler());
         http
             .addFilterAfter(oAuthProviderProcessingFilter(), OpenIDAuthenticationFilter.class);
+*/        
     }
 
     @Bean
