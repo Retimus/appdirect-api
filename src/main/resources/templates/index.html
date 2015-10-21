@@ -14,7 +14,7 @@
         <div class="container">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a th:href="@{user}">User Info</a></li>
+                <!-- <li><a th:href="@{user}">User Info</a></li> -->
                 <li><a th:href="@{users}">Users</a></li>
                 <li><a href="/logout" th:if="${authenticated}">logout</a></li>
             </ul>
@@ -23,7 +23,7 @@
     <div class="starter-template">
         <h1>This is AppDirect Integration attempt.</h1>
         <table>
-            <tr><td><a th:href="@{user}">User Info</a></td></tr>
+            <!-- <tr><td><a th:href="@{user}">User Info</a></td></tr> -->
             <tr><td><a th:href="@{users}">Users</a></td></tr>
         </table>
     </div>
